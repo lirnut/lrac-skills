@@ -17,6 +17,15 @@ Use the strongest appropriate wording, not the strongest available wording:
 - Fitted explanation: “The fitted coefficient suggests …”
 - Causal claim: require a design supporting that causal interpretation; predictive fit alone is insufficient.
 
+Do not exaggerate a predecessor's limitations to motivate a new method. A feature absent from selected implementations is not impossible for the method family; missing controls differ from missing mechanisms. Distinguish a paper's result, the presenter's synthesis, a working definition, and a proposal. Representative studies do not establish field-wide absence, and richer behavior does not by itself establish greater realism or validity.
+
+## Publication status and visible attribution
+
+- When adding a venue or publication label, verify it against publisher pages, official proceedings, or conference records. The existence of an arXiv version does not establish preprint-only status.
+- Distinguish main conference, Findings, Industry Track, Workshop, journal, accepted/online-first, and preprint. If unresolved, say publication status is unconfirmed rather than claiming the paper is unpublished.
+- Record the verified venue/status and lookup date separately from the exact version read or used for figures. Check figure numbers and results before substituting a published version for a preprint.
+- Make each core figure traceable by author/year and figure/panel ID, beside the figure or through an unambiguous citation key. Do not rely on a truncated footer title as its only attribution.
+
 ## Figure explanation card
 
 Prepare these answers for each core figure, normally in speaker notes:
@@ -49,6 +58,8 @@ For equations explain variables, signs, terms, assumptions, and fitting/evaluati
 ## Original figures and provenance
 
 Render original PDF panels rather than redrawing data from memory. Crop only; do not alter numerical values, erase contradictory series, recolor findings, or fabricate missing panels. If creating a conceptual diagram, label it as presenter-created and distinguish it from empirical evidence.
+
+For presenter-created process diagrams, make actors, component boundaries, the environment, arrow meanings, and feedback directions explicit. Avoid crossed or ambiguous connectors and accidental duplicate actors. Match method names to operations actually shown or implemented; branching trajectories alone do not establish tree search. Keep proposals visually and verbally separate from validated architectures or results.
 
 Use the crop script with a JSON manifest:
 

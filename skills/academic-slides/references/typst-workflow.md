@@ -33,16 +33,26 @@ The build uses a fresh output directory each run (`<deck-dir>/build` by default,
 - Put `#speaker-note[...]` after the slide it describes. Edit that source, not the exported Markdown or pdfpc JSON.
 - Use physical page numbers in scripts/audits or explicitly distinguish them from the displayed counter, which may exclude the cover.
 
+## Local layout repairs
+
+- Judge actual figure content: internal text, axes, and legends must be readable. A larger image box may not enlarge a `fit: "contain"` image when width is the limiting constraint.
+- Judge gaps between visible image boundaries, including source-image whitespace and centering inside unequal-aspect-ratio boxes, not only `column-gutter`. Adjust column proportions/alignment and unused margins before reducing text size. Preserve aspect ratios and source data.
+- For requested line-spacing changes, scope paragraph leading, paragraph spacing, block spacing, and explicit vertical gaps to the target region. Changing only `v()` may leave the real spacing unchanged. Check headings, superscripts, and adjacent lines for collisions.
+- Remove accidental empty layout components, such as empty takeaways, when they cause blank space or overflow; retain intentional separators. Do not remove substantive content or silently change its wording to make it fit.
+
 ## Known failure modes
 
 - Do not assume package API compatibility. `academic` rejects `primary`; that option requires the package's `brand` theme. Verify actual APIs before adding configuration.
 - Use `config-page`, not bare `set page`, for Touying page settings.
 - Match footer metadata using `here().page()` and `it.location().page()`, not a logical page counter that may skip the cover.
+- Choose citation styles using a stable content ID or metadata role, not physical page numbers. Physical locations find a page's records; content identity chooses their formatting. Handle missing abbreviation keys with a full-title fallback, but report missing source records rather than silently dropping citations.
+- After page insertion, deletion, or merging, update notes, cross-references, audit mappings, and any page-specific styling. A footer exception can be a symptom of earlier overflow; inspect pagination instead of only patching the dictionary.
 - Metadata placed after an explicit title slide can create an unintended blank page; keep cover references inside `extra`.
 - Successful compilation can still create overflow pages. Compare intended and actual counts.
 - Font fallback can silently change the design. Inspect rendered fonts and glyph coverage.
 - Text-bounds tests cannot detect every overlap, invisible notes, figure clipping, or tiny labels. Inspect rendered pages.
 - Do not conceal content with clipping just to satisfy bounds checks.
+- Do not reuse stale PDF/preview paths or fix overflow by accepting the accidental page count. Build after the final source edit and package that same revision.
 
 ## Delivery gate
 

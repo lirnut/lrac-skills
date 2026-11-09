@@ -2,17 +2,24 @@
 
 ## 1. Establish inputs without a prior project
 
-Record a compact working brief: audience/background, talk purpose, topic/question, requested language and format, supplied sources, user-specified constraints, and unresolved decisions. Do not invent a duration when none is provided.
+Record a compact working brief: talk mode (single-paper, multi-paper, or review), audience/background, talk purpose, topic/question, requested language and format, supplied sources, user-specified constraints, and unresolved decisions. Ask for an unspecified mode before creating a deck; reuse an established mode during revisions. Do not invent a duration when none is provided.
 
 | Available input | Next action |
 |---|---|
-| Topic only | Search candidate papers, obtain authorized full texts, verify selection against the common question. |
+| Topic only | Search candidate papers, obtain authorized full texts, verify selection against the chosen question or review scope. |
 | Papers | Inspect exact versions, methods, captions, results, conclusions, and relevant supplements. |
 | Existing deck | Read source and render the original before editing; preserve intentional user layout/content. |
 | Dataset plus findings | Verify provenance, definitions, units, and calculations; mark newly calculated results as presenter analysis. |
 | Inaccessible source | State the gap; request access or draft only a clearly incomplete structure. |
 
 Create project-local `papers/` and `assets/` only as needed. Do not assume old files or a personal research library exist.
+
+### Scope local revisions
+
+- Identify the current page by title and physical position, especially after deletions or merges. Read the live source and compare with the last delivered snapshot when available; preserve intervening user changes.
+- Treat font, line-spacing, and figure-gap requests as layout-only. Preserve wording, scientific qualifiers, figures, and notes unless the user asks to change them.
+- Treat a merge as combining content, not silently dropping one page. First try spacing and whitespace repairs; if it still cannot fit legibly, explain the tradeoff and obtain approval before deleting figures, definitions, or results.
+- Retain the user's accepted order and scope. Suggest a larger redesign separately instead of implementing it as part of a small fix.
 
 ## 2. Build an evidence-backed page plan
 
@@ -25,11 +32,15 @@ Require every empirical takeaway to have evidence before layout. Use neutral que
 
 Choose layouts by the content's job: task/process, original figure with explanation, comparison table, equation with variable definitions, or separate conclusions. Do not reuse title-plus-bullets merely because it is easy. Do not add decorative visuals to satisfy an image quota.
 
+Choose the summary's job as well: report a result, synthesize a theme, state progress and a bounded limitation, or bridge to the next section. Do not repeat the paper list as a takeaway or invent a gap to justify a transition. Adjust background depth to the audience; impose no universal background-page cap or required traditional-to-new-method order.
+
 ## 3. Write from the audit, then lay out
 
 Use `assets/source-audit-template.md` as a blank schema. For a result, write the supported observation with its conditions, attach its source, then decide how little text can appear without losing meaning. Keep detailed reading instructions and interpretation boundaries in speaker notes. Native tables/equations remain editable; paper figures remain unchanged.
 
 For complex figures, select legible panels, preserve their identities, and explain the selection. Split across pages rather than showing a full-page paper screenshot with unreadable labels. Do not change data or redraw empirical figures from memory.
+
+For existing decks, propose a split rather than deleting essential panels or splitting unasked to satisfy a local spacing request. Keep detailed conditions and caveats in notes without removing qualifiers needed for an accurate visible claim.
 
 ## 4. Apply three independent acceptance gates
 
@@ -48,11 +59,14 @@ For complex figures, select legible panels, preserve their identities, and expla
 - Final build passes structural checks without draft bypasses.
 - Every page has been visually inspected; no placeholders, clipped labels, overlap, note leakage, or unreadable figures remain.
 - Source, PDF, notes, citations, and page numbering agree.
+- Final links and source packages refer to the same reviewed revision, not an earlier build.
 - No timed schedule is added unless requested; a supplied duration constraint is addressed honestly.
 
 ## 5. Repair and report
 
 For each defect identify its page and gate, fix the underlying source, and rebuild. Recheck scientific wording after layout shortening and note/page alignment after insertions. Do not fix a count failure by redefining the expected page count to match unintended overflow. Do not hide a content defect with clipping or tiny text.
+
+Diagnose the constraint before repeated parameter changes: available width/height, image aspect ratio, paragraph/block spacing, empty layout components, or pagination. For local iterations, inspect the changed pages and affected neighbors plus the contact sheet; after insertion, deletion, or merging, check all downstream numbering, notes, cross-references, and citation styles. Run full-deck visual review and regenerate delivery artifacts at a delivery milestone; keep intermediate status reports concise.
 
 If a gate cannot pass, state the blocker and deliver an explicitly unfinished draft. Never promise uniformly excellent outcomes from instructions alone: the workflow improves repeatability, but source access, evidence quality, rendering, and actual review remain necessary.
 
