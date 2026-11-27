@@ -1,0 +1,17 @@
+{
+  "files": {
+    "assets/source-audit-template.md": "32d82f0d5a3db0c3093ff1cc18f5b1e2266f902604dff40c88c24aa187c91034",
+    "assets/typst-template/main.typ": "ef49fb9fa6acd246f976f159a3a8c4ed19300c7e885361996018ed2ca666447d",
+    "assets/typst-template/theme.typ": "11341de2d9cb8a8f5e2b250d7982898bc2790fd2b3cb5af310caa3cc43e89aa9",
+    "references/evidence-and-figures.md": "2be482e7829543385c8c557b41ce63a7f72da8a9ebdc7b30beea44e549982cd5",
+    "references/execution.md": "b1ec707ceb0830bee0d590d2e2c9bfadf03bf74715ba75eb5007d1bdbfda5537",
+    "references/paper-selection.md": "18c9760a0dba47301ca189790efd8a9324de490592cfbb89a998078b22aa72a1",
+    "references/presentation-standards.md": "bd505431b1c3fe84f87cb14acbcdb74e9c8759d8709f6e79fa9068b1fa88bdc5",
+    "references/production-workflow.md": "011d800da222e5248d8773d598335b2a6b215d501817034cd04811590667cabf",
+    "references/typst-workflow.md": "04a114263d7fabb984edd398058e316f884be23f76313c27cb9939fcd081dfb1",
+    "scripts/build.py": "8f21c772b9ff88e05624d1e531a5d783fa097a30235011dcd5c0662f34449b9a",
+    "scripts/extract_figures.py": "9288186c6be1a208bc95f48776a0af19ef3b88ed535cfa1e7bb4220fd3008555",
+    "scripts/self_test.py": "79aa233fb8ed8c1cdc11491b0f117580bf180dd39fb31b2a50f7929066e3fc72"
+  },
+  "schema_version": 1
+}

@@ -49,7 +49,7 @@ Prepare JSON in memory and pass it to this skill's script through standard input
 python <skill-base>/scripts/record_experience.py --repo ~/Repos/lrac-skills <<'JSON'
 {
   "source": {"project": "research-talk", "session_id": null},
-  "topics": ["academic-slides", "render-validation"],
+  "topics": ["slide-share", "render-validation"],
   "kind": "verified-fix",
   "problem": "A generated slide deck compiled successfully but still contained clipped content.",
   "lesson": "Successful compilation does not replace rendered-output inspection.",

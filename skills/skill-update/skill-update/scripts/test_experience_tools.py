@@ -34,7 +34,7 @@ class ExperienceToolsTests(unittest.TestCase):
         self.git("commit", "-qm", "fixture")
         self.payload = {
             "source": {"project": "test-project", "session_id": None},
-            "topics": ["academic-slides", "render-validation"],
+            "topics": ["slide-share", "render-validation"],
             "kind": "verified-fix",
             "problem": "编译成功后仍有内容裁切。",
             "lesson": "需要检查渲染。",
@@ -120,11 +120,11 @@ class ExperienceToolsTests(unittest.TestCase):
 
     def test_decision_lifecycle(self):
         event_id = self.capture()["id"]
-        self.git("branch", "feat/academic-slides-skill")
+        self.git("branch", "feat/slide-share-skill")
         commit = self.git("rev-parse", "HEAD")
         self.run_tool(
             MANAGE, "record", "--event", event_id, "--decision", "applied",
-            "--reason", "test incorporation", "--branch", "feat/academic-slides-skill",
+            "--reason", "test incorporation", "--branch", "feat/slide-share-skill",
             "--commit", commit,
         )
         self.assertEqual(self.run_tool(MANAGE, "list"), [])
@@ -182,13 +182,13 @@ class ExperienceToolsTests(unittest.TestCase):
 
     def test_unrelated_commit_cannot_be_marked_applied(self):
         event_id = self.capture()["id"]
-        self.git("branch", "feat/academic-slides-skill")
+        self.git("branch", "feat/slide-share-skill")
         (self.repo / "unrelated.txt").write_text("unrelated\n")
         self.git("add", "unrelated.txt")
         self.git("commit", "-qm", "not on review branch")
         self.run_tool(
             MANAGE, "record", "--event", event_id, "--decision", "applied",
-            "--reason", "wrong branch", "--branch", "feat/academic-slides-skill",
+            "--reason", "wrong branch", "--branch", "feat/slide-share-skill",
             "--commit", self.git("rev-parse", "HEAD"), success=False,
         )
         self.assertEqual(self.run_tool(MANAGE, "list")[0]["decision"], "pending")

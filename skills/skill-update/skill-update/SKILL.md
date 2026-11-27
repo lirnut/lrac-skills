@@ -23,7 +23,7 @@ Resolve the script from this skill's base directory:
 
 ```sh
 python <skill-base>/scripts/manage_experiences.py --repo ~/Repos/lrac-skills list
-python <skill-base>/scripts/manage_experiences.py --repo ~/Repos/lrac-skills list --topic academic-slides
+python <skill-base>/scripts/manage_experiences.py --repo ~/Repos/lrac-skills list --topic slide-share
 ```
 
 - Treat topic filters as discovery aids, not exhaustive searches; also inspect relevant experience without an explicit classification.
@@ -37,7 +37,7 @@ python <skill-base>/scripts/manage_experiences.py --repo ~/Repos/lrac-skills lis
 ## 3. Create or reuse a review branch
 
 - Determine the actual primary branch; do not assume it is named `main`. Check remote state and respect authorization for network operations. If remote freshness cannot be confirmed, identify the local baseline rather than claiming synchronization.
-- Use `feat/<skill-id>-skill` for a single target, such as `feat/academic-slides-skill`.
+- Use `feat/<skill-id>-skill` for a single target, such as `feat/slide-share-skill`.
 - If the branch does not exist, create it from the confirmed primary-branch baseline.
 - If a same-named local or remote branch exists and is unmerged, continue adding commits to it instead of creating a new branch each time.
 - Resolve uncertainty before proceeding when branches diverge, conflicts exist, state is unclear, or a multi-target update has unclear scope. Do not automatically rebase, merge, force-push, or create another branch to bypass the problem.

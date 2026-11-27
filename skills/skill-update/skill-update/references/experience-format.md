@@ -45,7 +45,7 @@ For example:
 ```sh
 python <skill-base>/scripts/manage_experiences.py --repo ~/Repos/lrac-skills record \
   --event <event-id> --decision applied --reason "Add a rendered-output inspection step" \
-  --branch feat/academic-slides-skill --commit <full-commit-hash>
+  --branch feat/slide-share-skill --commit <full-commit-hash>
 ```
 
 Repeat `--event` to associate multiple events. For deferrals, use `--decision deferred` and omit branch and commit.
